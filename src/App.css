@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: 'satoshi';
+  src: url('./fonts/Satoshi-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'satoshi', sans-serif;
+  /* max-width: 1280px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* h1,h2 {
+  font-family: 'Urbanist', serif;
+  font-weight: 500px
+} */
+
+/* p {
+  font-family: 'satoshi', sans-serif;
+} */
+
+
+
+/* Add this to your CSS file or inside <style> tags */
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Apply the animation to the slider */
+.slider-left {
+  animation: slide-left 20s linear infinite;
+}
+
+.slider-right {
+  animation: slide-right 20s linear infinite;
+}
+
+/* .slider-image {
+  width: 100%;
+  object-fit: cover;
+} */
+
+.custom-pagination .swiper-pagination-bullet {
+  background-color: #1782C5; /* Blue color for dots */
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  margin: 5px;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background-color: #000; /* Active dot color */
+}
+
+
+
+
+
+
