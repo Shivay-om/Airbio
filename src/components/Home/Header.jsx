@@ -93,7 +93,7 @@ const Header = () => {
                                     onMouseLeave={() => setActiveSubmenu("")}
                                 >
                                     <NavLink
-                                        to="/product/category1"
+                                        to="/product/Biosafety"
                                         className=" px-4 py-2 flex justify-between gap-4 hover:bg-gray-100"
                                     >
                                         Biosafety Cabinets
@@ -102,31 +102,31 @@ const Header = () => {
                                     {activeSubmenu === "biosafety" && (
                                         <div className="absolute top-0 left-[230px] bg-white shadow-lg  w-[280px] py-2 z-20">
                                             <NavLink
-                                                to="/product/category1/sub1"
+                                                to="/product/Biosafety/BscClassIIB2"
                                                 className="block px-4 py-2 hover:bg-gray-100"
                                             >
                                                 BSC CLASS II B2 <span className='text-[#1782C5]'>(Falcon)</span>
                                             </NavLink>
                                             <NavLink
-                                                to="/product/category1/sub2"
+                                                to="/product/Biosafety/BscClassIIB2(Agies)"
                                                 className="block px-4 py-2 hover:bg-gray-100"
                                             >
                                                 BSC CLASS II B2 <span className='text-[#1782C5]'>(Agies)</span>
                                             </NavLink>
                                             <NavLink
-                                                to="/product/category1/sub1"
+                                                to="/product/Biosafety/BscClassIIA2"
                                                 className="block px-4 py-2 hover:bg-gray-100"
                                             >
                                                 BSC CLASS II A2
                                             </NavLink>
                                             <NavLink
-                                                to="/product/category1/sub2"
+                                                to="/product/Biosafety/BscClassIIA2(Agies)"
                                                 className="block px-4 py-2 hover:bg-gray-100"
                                             >
                                                 BSC CLASS II A2 <span className='text-[#1782C5]'>(Agies)</span>
                                             </NavLink>
                                             <NavLink
-                                                to="/product/category1/sub2"
+                                                to="/product/Biosafety/BscMainClassIIA2"
                                                 className="block px-4 py-2 hover:bg-gray-100"
                                             >
                                                 Main BSC CLASS II A2
@@ -142,7 +142,7 @@ const Header = () => {
                                     onMouseLeave={() => setActiveSubmenu("")}
                                 >
                                     <NavLink
-                                        to="/product/category2"
+                                        to="/product/FumeHoods"
                                         className=" px-4 py-2 flex justify-between gap-4 hover:bg-gray-100"
                                     >
                                         Fume Hoods
@@ -151,7 +151,7 @@ const Header = () => {
                                     {activeSubmenu === "fume" && (
                                         <div className="absolute top-0 left-[230px] bg-white shadow-lg  w-[280px] py-2 z-20">
                                             <NavLink
-                                                to="/product/category2/sub1"
+                                                to="/product/FumeHoods/FumeHood"
                                                 className="block px-4 py-2 hover:bg-gray-100"
                                             >
                                                 Air Fume Hood
@@ -168,7 +168,7 @@ const Header = () => {
                                     onMouseLeave={() => setActiveSubmenu("")}
                                 >
                                     <NavLink
-                                        to="/product/category3"
+                                        to="/product/laminar"
                                         className=" px-4 py-2 flex gap-4 hover:bg-gray-100"
                                     >
                                         Laminar Flow Cabinets
@@ -177,16 +177,16 @@ const Header = () => {
                                     {activeSubmenu === "laminar" && (
                                         <div className="absolute top-0 left-[230px] bg-white shadow-lg  w-[280px] py-2 z-20">
                                             <NavLink
-                                                to="/product/category3/sub1"
+                                                to="/product/laminar/Airflow"
                                                 className="block px-4 py-2 hover:bg-gray-100"
                                             >
                                                 Vertical Laminar Airflow
                                             </NavLink>
                                             <NavLink
-                                                to="/product/category3/sub2"
+                                                to="/product/laminar/Airflow(Velocity)"
                                                 className="block px-4 py-2 hover:bg-gray-100"
                                             >
-                                                Vertical Laminar Airflow (Velocity)
+                                                Vertical Laminar Airflow <span className='text-[#1782C5]'>(Velocity)</span>
                                             </NavLink>
                                         </div>
                                     )}
@@ -294,41 +294,41 @@ const Header = () => {
                                             className={`flex justify-between items-center hover:text-gray-400 cursor-pointer ${currentSubmenu === "submenu1" ? "text-[#1782C5]" : ""}`}
                                             onClick={() => toggleMobileNestedMenu("submenu1")}
                                         >
-                                            <Link to='/product/category1'>Biosafety Cabinets</Link>
+                                            <Link to='/product/Biosafety'>Biosafety Cabinets</Link>
                                             {currentSubmenu === "submenu1" ? <FaMinus /> : <FaPlus />}
                                         </div>
                                         {currentSubmenu === "submenu1" && (
                                             <div className="ml-4 mt-2 space-y-2">
                                                 <Link
-                                                    to="/product/category1/sub1"
+                                                    to="/product/Biosafety/BscClassIIB2"
                                                     className={`block hover:text-gray-400 ${isActive("/product/category1/item1") ? "text-[#1782C5]" : ""}`}
                                                     onClick={toggleMenu}
                                                 >
                                                     BSC CLASS II B2 <span className='text-[#1782C5]'>(Falcon)</span>
                                                 </Link>
                                                 <Link
-                                                    to="/product/category1/sub2"
+                                                    to="/product/Biosafety/BscClassIIB2(Agies)"
                                                     className={`block hover:text-gray-400 ${isActive("/product/category1/item2") ? "text-[#1782C5]" : ""}`}
                                                     onClick={toggleMenu}
                                                 >
                                                     BSC CLASS II B2 <span className='text-[#1782C5]'>(Agies)</span>
                                                 </Link>
                                                 <Link
-                                                    to="/product/category1/sub3"
+                                                    to="/product/Biosafety/BscClassIIA2(Agies)"
                                                     className={`block hover:text-gray-400 ${isActive("/product/category1/item3") ? "text-[#1782C5]" : ""}`}
                                                     onClick={toggleMenu}
                                                 >
                                                     BSC CLASS II A2
                                                 </Link>
                                                 <Link
-                                                    to="/product/category1/sub4"
+                                                    to="/product/Biosafety/BscClassIIA2"
                                                     className={`block hover:text-gray-400 ${isActive("/product/category1/item4") ? "text-[#1782C5]" : ""}`}
                                                     onClick={toggleMenu}
                                                 >
                                                     BSC CLASS II A2 <span className='text-[#1782C5]'>(Agies)</span>
                                                 </Link>
                                                 <Link
-                                                    to="/product/category1/sub5"
+                                                    to="/product/Biosafety/BscMainClassIIA2"
                                                     className={`block hover:text-gray-400 ${isActive("/product/category1/item5") ? "text-[#1782C5]" : ""}`}
                                                     onClick={toggleMenu}
                                                 >
@@ -344,13 +344,13 @@ const Header = () => {
                                             className={`flex justify-between items-center hover:text-gray-400 cursor-pointer ${currentSubmenu === "submenu2" ? "text-[#1782C5]" : ""}`}
                                             onClick={() => toggleMobileNestedMenu("submenu2")}
                                         >
-                                            <Link to='/product/category2'>Fume Hoods</Link>
+                                            <Link to='/product/FumeHoods'>Fume Hoods</Link>
                                             {currentSubmenu === "submenu2" ? <FaMinus /> : <FaPlus />}
                                         </div>
                                         {currentSubmenu === "submenu2" && (
                                             <div className="ml-4 mt-2 space-y-2">
                                                 <Link
-                                                    to="/product/category2/item1"
+                                                    to="/product/FumeHoods/FumeHood"
                                                     className={`block hover:text-gray-400 ${isActive("/product/category2/item1") ? "text-[#1782C5]" : ""}`}
                                                     onClick={toggleMenu}
                                                 >
@@ -366,20 +366,20 @@ const Header = () => {
                                             className={`flex justify-between items-center hover:text-gray-400 cursor-pointer ${currentSubmenu === "submenu3" ? "text-[#1782C5]" : ""}`}
                                             onClick={() => toggleMobileNestedMenu("submenu3")}
                                         >
-                                            <Link to='/product/category3'>Laminar Flow Cabinets</Link>
+                                            <Link to='/product/laminar'>Laminar Flow Cabinets</Link>
                                             {currentSubmenu === "submenu3" ? <FaMinus /> : <FaPlus />}
                                         </div>
                                         {currentSubmenu === "submenu3" && (
                                             <div className="ml-4 mt-2 space-y-2">
                                                 <Link
-                                                    to="/product/category3/item1"
+                                                    to="/product/laminar/Airflow"
                                                     className={`block hover:text-gray-400 ${isActive("/product/category3/item1") ? "text-[#1782C5]" : ""}`}
                                                     onClick={toggleMenu}
                                                 >
                                                     Vertical Laminar Airflow
                                                 </Link>
                                                 <Link
-                                                    to="/product/category3/item2"
+                                                    to="/product/laminar/Airflow(Velocity)"
                                                     className={`block hover:text-gray-400 ${isActive("/product/category3/item2") ? "text-[#1782C5]" : ""}`}
                                                     onClick={toggleMenu}
                                                 >

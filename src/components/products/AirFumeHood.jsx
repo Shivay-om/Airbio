@@ -1,19 +1,33 @@
 import React, { useState } from 'react'
 import Header from '../Home/Header'
-import productData from './productPageData';
-import SVG from '../../assets/images/downloadSVG.svg'
-import logo from '../../assets/images/teamSvg.svg'
-import product1 from '../../assets/images/biosafety/bsc class_B2 (Falcon)/BSC CLASS _ B2 (Falcon)-FRONT1.webp'
 import whatsapp from '../../assets/images/Whatsapp1.svg'
-import arrow from '../../assets/images/crossArrow.svg'
-import KeyFeatures from './KeyFeatures';
-import Download from './Download';
-import DiscoverProducts from './DiscoverProducts';
+import rightArrow from '../../assets/images/Chevron_Right.svg'
 import Assistants from '../Home/Assistants'
-import FalconBarcode from './FalconBarcode';
+import product1 from '../../assets/images/fume/fume.webp'
+import product2 from '../../assets/images/fume/fume.webp'
+import product3 from '../../assets/images/fume/fume.webp'
 
 
-const ProductPage = () => {
+
+const AirFumeData = [
+    {
+        name: 'Fume Hood Cabinets',
+        title: 'Air Fume Hood',
+        //   highlighted: "(Agies)",
+        title1: 'Containment',
+        title2: 'Protection',
+        title3: 'Performance',
+        description1: 'AirBio Fume Hoods provide tailored solutions to meet the safety and operational requirements of diverse laboratory environments. Whether handling volatile chemicals, ensuring air quality, or maintaining safety for specialized substances, there’s an ideal fume hood for every application.',
+        description2: 'Ideal for laboratories requiring superior containment, AirBio fume hoods adhere to stringent safety standards, making them indispensable for chemical handling, pharmaceutical research, and academic applications.',
+        img1: product1,
+        img2: product2,
+        img3: product3,
+        img4: product2,
+    },
+]
+
+
+const AirFumeHood = () => {
     const [selectedImage, setSelectedImage] = useState(product1);
 
     return (
@@ -21,7 +35,7 @@ const ProductPage = () => {
             <Header />
             <hr className="w-[95%] h-1 mt-6 border-t-1 border-[#C3C3C3] mx-auto" />
             <div className="p-6">
-                {productData.map((product, index) => (
+                {AirFumeData.map((product, index) => (
                     <div
                         key={index}
                         className="relative md:w-[90%] mx-auto md:flex justify-between items-center md:gap-8 pt-2 rounded-lg  border-[#1782C5]"
@@ -131,14 +145,50 @@ const ProductPage = () => {
             </div>
 
             <div className='p-6 md:w-[90%] mx-auto'>
-                <h1 className='text-center md:text-start text-xl md:text-2xl text-[#1782C5] p-1 px-2 py-3 rounded-lg bg-[#F5F5F5] font-medium'>Tailored to Meet Biosafety Needs</h1>
-                <p className='my-5 md:px-2 text-justify'>Biosafety Cabinets come in various classes, each catering to specific bio-containment requirements. Within these classes, the cabinets differ based on how air is recirculated or exhausted. Regardless of the type, all AirBio BSCs leverage High Efficiency Particulate Air (HEPA) or Ultra Low Particulate Air (ULPA) filters to maintain a sterile workspace.</p>
+                <h1 className='text-center md:text-start text-xl md:text-2xl text-[#1782C5] p-1 px-2 py-3 rounded-lg bg-[#F5F5F5] font-medium'>Meet AirBio’s  Fume Hood</h1>
+                <p className='my-5 md:px-2 text-justify'>A trusted choice for laboratories worldwide, the Velocity fume hood blends state-of-the-art technology with ergonomic design to ensure optimal safety and performance. Available in various configurations, it offers a versatile and user-centric solution for diverse laboratory needs.
+                </p>
             </div>
 
-            <KeyFeatures />
-            {/* <Download /> */}
-            <FalconBarcode/>
-            {/* <DiscoverProducts/> */}
+            <div className='p-6 md:w-[90%] mx-auto'>
+                <h1 className='text-center md:text-start text-xl md:text-2xl text-[#1782C5] p-1 px-2 py-3 rounded-lg bg-[#F5F5F5] font-medium'>Key Features of Fume Hood</h1>
+
+                <div className='md:px-2'>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Advanced Filtration System with options for carbon or HEPA filters to ensure precise air purification.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Aerodynamic Sash Design that reduces turbulence and enhances user protection.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Digital Touch Interface for accurate airflow monitoring and intuitive control.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Built-in Alarm System to alert users to airflow inconsistencies or filter changes.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Durable Work Surface constructed from chemical-resistant materials for extended longevity.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Customizable Exhaust Options for recirculating or ducted installations.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Energy-Efficient LED Lighting that provides excellent visibility with minimal energy consumption.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Ergonomic Sash Handles designed for ease of use and operator comfort.</p>
+                    </div>
+                </div>
+            </div>
+            
             <div className='py-10'>
                 <Assistants />
             </div>
@@ -146,4 +196,4 @@ const ProductPage = () => {
     )
 }
 
-export default ProductPage
+export default AirFumeHood

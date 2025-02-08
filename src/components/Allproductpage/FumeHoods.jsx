@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Header from '../Home/Header'
 import img1 from '../../assets/images/fume/fumehoods.webp'
-import art1 from '../../assets/images/art1.webp'
+import art1 from '../../assets/images/fume/fume.webp'
 import art2 from '../../assets/images/art2.webp'
 import art3 from '../../assets/images/art3.webp'
 import vector from '../../assets/images/Vector.svg'
@@ -78,32 +78,32 @@ const features = [
 const cardsData = [
     {
         title: "Falcon",
-        image: art2, // Replace `art2` with the path to your image
-        subtitle: "Class II, Type A2 Biosafety Cabinet",
-        description: "Perfect for academic and laboratory settings",
+        image: art1,
+        subtitle: "Air Fume Hood",
+        description: "Designs to meet the specific needs of different laboratory and industrial applications",
         buttonText: "Visit Product",
     },
-    {
-        title: "Velocity",
-        image: art1, // Replace `art1` with the path to your image
-        subtitle: "Class II, Main A2 Biosafety Cabinet",
-        description: "Perfect for academic and laboratory settings",
-        buttonText: "Visit Product",
-    },
-    {
-        title: "Harmony",
-        image: art3, // Replace `art3` with the path to your image
-        subtitle: "Class II, Type B2 Biosafety Cabinet",
-        description: "Ideal for safely handling minute quantities of volatile chemicals & trace amounts of radionuclides",
-        buttonText: "Visit Product",
-    },
-    {
-        title: "Infinity",
-        image: art1, // Replace `art4` with the path to your image
-        subtitle: "Class II, Main B2 Biosafety Cabinet",
-        description: "Ideal for safely handling minute quantities of volatile chemicals & trace amounts of radionuclides",
-        buttonText: "Visit Product",
-    },
+    // {
+    //     title: "Velocity",
+    //     image: art1,
+    //     subtitle: "Class II, Main A2 Biosafety Cabinet",
+    //     description: "Perfect for academic and laboratory settings",
+    //     buttonText: "Visit Product",
+    // },
+    // {
+    //     title: "Harmony",
+    //     image: art3,
+    //     subtitle: "Class II, Type B2 Biosafety Cabinet",
+    //     description: "Ideal for safely handling minute quantities of volatile chemicals & trace amounts of radionuclides",
+    //     buttonText: "Visit Product",
+    // },
+    // {
+    //     title: "Infinity",
+    //     image: art1,
+    //     subtitle: "Class II, Main B2 Biosafety Cabinet",
+    //     description: "Ideal for safely handling minute quantities of volatile chemicals & trace amounts of radionuclides",
+    //     buttonText: "Visit Product",
+    // },
 
 ];
 
@@ -147,14 +147,14 @@ const FumeHoods = () => {
                             </p>
                         </div>
                         <div className='pl-5 md:pl-10'>
-                            <div className="flex overflow-x-scroll scrollbar scrollbar-thumb-customBlue scrollbar-track-gray-200 scrollbar-thumb-rounded-full scrollbar-track-rounded-full pr-5  gap-4 md:gap-10 py-4 mx-auto">
+                            <div className="flex md:justify-center overflow-x-scroll md:overflow-hidden scrollbar scrollbar-thumb-customBlue scrollbar-track-gray-200 scrollbar-thumb-rounded-full scrollbar-track-rounded-full pr-5 gap-4 md:gap-10 py-4 mx-auto">
                                 {cardsData.map((card, index) => (
                                     <div key={index}>
                                         {/* Card Content */}
                                         <div className="min-w-[318px] h-auto md:w-[300px] flex flex-col justify-center items-center md:min-w-0 rounded-3xl p-4 border border-[#CDCDCD]">
-                                            <h2 className="text-[16px] p-[4px] px-4 border-[#1782C5] text-[#1782C5] border rounded-[50px]">
+                                            {/* <h2 className="text-[16px] p-[4px] px-4 border-[#1782C5] text-[#1782C5] border rounded-[50px]">
                                                 {card.title}
-                                            </h2>
+                                            </h2> */}
                                             <img
                                                 src={card.image}
                                                 alt={`Card ${index + 1}`}
@@ -163,7 +163,7 @@ const FumeHoods = () => {
                                         </div>
 
                                         {/* Card Details */}
-                                        <div className="py-2 flex flex-col justify-center  items-center md:items-start">
+                                        <div className="py-2 md:w-[300px] flex flex-col justify-center  items-center md:items-start">
                                             <h1 className="font-medium md:text-start text-lg">{card.subtitle}</h1>
                                             <p className="text-[#1782C5] text-center mb-3 md:text-start h-[50px]">{card.description}</p>
                                             <button className="px-4 py-1 bg-black hover:bg-[#1782C5] text-white flex justify-center items-center gap-2 rounded-[50px] mt-5 border-[#CDCDCD]">

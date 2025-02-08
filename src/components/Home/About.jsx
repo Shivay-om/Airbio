@@ -18,6 +18,7 @@ import usp2 from '../../assets/images/usp2.svg'
 import usp3 from '../../assets/images/usp3.svg'
 import usp4 from '../../assets/images/usp4.svg'
 import CountUp from 'react-countup';
+import { Link } from 'react-router-dom'
 
 
 
@@ -148,9 +149,11 @@ const About = () => {
                         <div className="min-w-[318px] h-[530px] md:w-[350px] md:h-[500px] flex flex-col justify-center items-center md:min-w-0 rounded-3xl p-4 border border-[#CDCDCD]">
                             <h2 className="p-[4px] py-2 px-4 mb-2 bg-[#1782C5] text-white rounded-[50px]">Biosafety Cabinets</h2>
                             <img src={art1} alt="Card 1" className="w-full h-[369px] md:w-[280px] object-cover mb-2" />
+                            <Link to="/product/Biosafety">
                             <button className="px-4 py-2 flex bg-black hover:bg-[#1782C5] text-white justify-center items-center gap-2 rounded-[50px]  border-[#CDCDCD] hover:border-[#1782C5] group">View More
                                 <img src={vector} alt="vector icon" className='text-white' />
                             </button>
+                            </Link>
                         </div>
 
 
@@ -158,9 +161,11 @@ const About = () => {
                         <div className="min-w-[318px] h-[530px] md:w-[350px] md:h-[500px] flex flex-col justify-center items-center md:min-w-0 rounded-3xl p-4 border border-[#CDCDCD]">
                             <h2 className="p-[4px] py-2  px-4 mb-2 bg-[#1782C5] text-white  rounded-[50px]">Fume Hoods</h2>
                             <img src={art2} alt="Card 1" className="w-[254px] md:w-[280px] h-[369px] object-cover mb-2" />
+                            <Link to="/product/FumeHoods">
                             <button className=" px-4 py-2 bg-black flex  justify-center items-center hover:bg-[#1782C5] text-white gap-2 rounded-[50px]  border-[#CDCDCD] hover:border-[#1782C5]">View More
                                 <img src={vector} alt="vector icon" />
                             </button>
+                            </Link>
                         </div>
 
                         {/* Card 3 */}
@@ -168,8 +173,11 @@ const About = () => {
                         <div className="min-w-[318px] h-[530px] md:w-[350px] md:h-[500px] flex flex-col justify-center items-center md:min-w-0 rounded-3xl p-4 border border-[#CDCDCD]">
                             <h2 className="p-[4px] py-2  px-4 mb-2 bg-[#1782C5] text-white  rounded-[50px]">Laminar Flow Cabinets</h2>
                             <img src={art3} alt="Card 2" className="w-full h-[369px] md:w-[280px] object-cover mb-2" />
+                            <Link to="/product/laminar">
                             <button className=" px-4 py-2 bg-black flex  justify-center items-center hover:bg-[#1782C5] text-white gap-2 rounded-[50px]  border-[#CDCDCD] hover:border-[#1782C5]">View More
-                                <img src={vector} alt="vector icon" /></button>
+                                <img src={vector} alt="vector icon" />
+                            </button>
+                            </Link>
                         </div>
                     </div>
 

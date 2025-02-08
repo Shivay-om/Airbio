@@ -3,17 +3,40 @@ import Header from '../Home/Header'
 import productData from './productPageData';
 import SVG from '../../assets/images/downloadSVG.svg'
 import logo from '../../assets/images/teamSvg.svg'
-import product1 from '../../assets/images/biosafety/bsc class_B2 (Falcon)/BSC CLASS _ B2 (Falcon)-FRONT1.webp'
+// import product1 from '../../assets/images/biosafety/bsc class_B2 (Falcon)/BSC CLASS _ B2 (Falcon)-FRONT1.webp'
 import whatsapp from '../../assets/images/Whatsapp1.svg'
 import arrow from '../../assets/images/crossArrow.svg'
 import KeyFeatures from './KeyFeatures';
 import Download from './Download';
 import DiscoverProducts from './DiscoverProducts';
 import Assistants from '../Home/Assistants'
-import FalconBarcode from './FalconBarcode';
+import rightArrow from '../../assets/images/Chevron_Right.svg'
+import product1 from '../../assets/images/biosafety/bsc class 2 A2 (Agies)/BSC CLASS II A2 (Agies)-FRONT.webp'
+import product2 from '../../assets/images/biosafety/bsc class 2 A2 (Agies)/BSC CLASS II A2 (Agies)-CROSS.webp'
+import product3 from '../../assets/images/biosafety/bsc class 2 A2 (Agies)/BSC CLASS II A2 (Agies)-SIDE.webp'
+import AgiesQR from './AgiesQR';
 
 
-const ProductPage = () => {
+
+const A2AgiesData = [
+    {
+        name: 'Biosafety Cabinets',
+        title: 'BSC Class II A2',
+        highlighted: "(Agies)",
+        title1: 'Precision',
+        title2: 'Sterility',
+        title3: 'Efficiency',
+        description1: 'The Class II, Type A2 Biosafety Cabinet is a versatile and efficient tabletop model, designed to deliver reliable performance at a competitive price point—perfect for academic and laboratory settings. With optional base stand configurations, it offers flexibility to suit various workspace needs.Equipped with a single ultra-high-efficiency DC ECM motor, this cabinet ensures economical operation by reducing energy consumption and extending filter life, providing cost-effective long-term use. For pharmacy compounding tasks, the cabinet can be seamlessly upgraded with an optional IV bar attachment, enhancing its functionality.',
+        description2: "'AirBio's innovative monolithic stainless steel design not only enhances durability but also simplifies cleaning, ensuring a hygienic and robust workspace throughout its lifetime. While most Type A2 cabinets recirculate HEPA-filtered air back into the lab, this unit can also be fully exhausted through the facility's HVAC system when working with non-flammable or volatile chemicals or trace amounts of radionuclides, ensuring optimal safety. This model combines essential features, efficiency, and adaptability, making it a smart choice for various laboratory applications.'",
+        img1: product1,
+        img2: product2,
+        img3: product3,
+        img4: product2,
+    },
+]
+
+
+const A2Agies = () => {
     const [selectedImage, setSelectedImage] = useState(product1);
 
     return (
@@ -21,7 +44,7 @@ const ProductPage = () => {
             <Header />
             <hr className="w-[95%] h-1 mt-6 border-t-1 border-[#C3C3C3] mx-auto" />
             <div className="p-6">
-                {productData.map((product, index) => (
+                {A2AgiesData.map((product, index) => (
                     <div
                         key={index}
                         className="relative md:w-[90%] mx-auto md:flex justify-between items-center md:gap-8 pt-2 rounded-lg  border-[#1782C5]"
@@ -131,13 +154,44 @@ const ProductPage = () => {
             </div>
 
             <div className='p-6 md:w-[90%] mx-auto'>
-                <h1 className='text-center md:text-start text-xl md:text-2xl text-[#1782C5] p-1 px-2 py-3 rounded-lg bg-[#F5F5F5] font-medium'>Tailored to Meet Biosafety Needs</h1>
-                <p className='my-5 md:px-2 text-justify'>Biosafety Cabinets come in various classes, each catering to specific bio-containment requirements. Within these classes, the cabinets differ based on how air is recirculated or exhausted. Regardless of the type, all AirBio BSCs leverage High Efficiency Particulate Air (HEPA) or Ultra Low Particulate Air (ULPA) filters to maintain a sterile workspace.</p>
+                <h1 className='text-center md:text-start text-xl md:text-2xl text-[#1782C5] p-1 px-2 py-3 rounded-lg bg-[#F5F5F5] font-medium'>Meet AirBio’s Velocity Laminar Air Flow Cabinet</h1>
+                <p className='my-5 md:px-2 text-justify'>A trusted solution in laboratories worldwide, the Velocity vertical laminar air flow cabinet combines advanced technology with user-friendly features to elevate safety and efficiency. Available in multiple sizes, it boasts a modern touch-screen interface for seamless operation. </p>
             </div>
 
-            <KeyFeatures />
-            {/* <Download /> */}
-            <FalconBarcode/>
+            <div className='p-6 md:w-[90%] mx-auto'>
+                <h1 className='text-center md:text-start text-xl md:text-2xl text-[#1782C5] p-1 px-2 py-3 rounded-lg bg-[#F5F5F5] font-medium'> Key Features of Class II, Type A2 Biosafety Cabinet</h1>
+                <div className='md:px-2'>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Versatile Design: Compact tabletop model with optional base stand configurations for adaptability in various workspace settings.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Energy Efficiency: Equipped with a single ultra-high-efficiency DC ECM motor for reduced energy consumption and extended filter life, ensuring economical operation.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Enhanced Functionality: Optional IV bar attachment available for pharmacy compounding tasks, increasing the cabinet's usability.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Durable Construction: Monolithic stainless steel design ensures long-term durability and simplifies cleaning for a hygienic workspace.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Flexible Airflow Options: Recirculates HEPA-filtered air back into the lab or can be fully exhausted through the facility's HVAC system for handling non-flammable or volatile chemicals and trace radionuclides.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Cost-Effective: Designed for reliable performance at a competitive price point, making it suitable for academic and laboratory environments.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Optimized Safety: Ensures a controlled and secure environment for handling sensitive materials.</p>
+                    </div>
+                </div>
+            </div>
+            <AgiesQR/>
             {/* <DiscoverProducts/> */}
             <div className='py-10'>
                 <Assistants />
@@ -146,4 +200,4 @@ const ProductPage = () => {
     )
 }
 
-export default ProductPage
+export default A2Agies

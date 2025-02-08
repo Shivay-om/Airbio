@@ -7,28 +7,27 @@ import Header from '../Home/Header'
 import art1 from '../../assets/images/biosafety/bsc.jpg'
 import art2 from '../../assets/images/fume/fume.webp'
 import art3 from '../../assets/images/laminar/laf.webp'
+import { Link, Route } from 'react-router-dom'
 
 const cardData = [
     {
         title: "Biosafety Cabinets",
         image: art1,
         description: "Ensure contaminant free, precision tasks in research, healthcare and manufacturing",
+        Route: '/product/Biosafety'
     },
     {
         title: "Air Fume Hoods",
         image: art2,
         description: "Safe, efficient and eco-friendly protection from hazardous fumes and pollutants",
+        Route: '/product/FumeHoods'
     },
     {
         title: "Laminar Flow Cabinets",
         image: art3,
         description: "Create a secure environment to handle biological samples with maximum safety and compliance",
+        Route: '/product/laminar'
     },
-    // {
-    //     title: "Biosafety Cabinets",
-    //     image: art2,
-    //     description: "Ensure contaminant free, precision tasks in research, healthcare and manufacturing",
-    // },
 ];
 
 const DiscoverProducts = () => {
@@ -63,10 +62,12 @@ const DiscoverProducts = () => {
                                 className="w-full md:w-[260px] md:h-[310px] mb-2 object-cover"
                             />
                             <p className="mb-4 text-center text-[#1782C5]">{card.description}</p>
+                            <Link to={card.Route}>
                             <button className="px-4 py-1 bg-black hover:bg-[#1782C5] text-white flex justify-center items-center gap-2 rounded-[50px] border-[#CDCDCD] self-end">
-                                View More
+                                View more
                                 <img src={vector} alt="vector icon" />
                             </button>
+                            </Link>
                         </div>
                     ))}
                 </div>

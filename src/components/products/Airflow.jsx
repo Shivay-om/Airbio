@@ -1,19 +1,33 @@
 import React, { useState } from 'react'
 import Header from '../Home/Header'
-import productData from './productPageData';
-import SVG from '../../assets/images/downloadSVG.svg'
-import logo from '../../assets/images/teamSvg.svg'
-import product1 from '../../assets/images/biosafety/bsc class_B2 (Falcon)/BSC CLASS _ B2 (Falcon)-FRONT1.webp'
 import whatsapp from '../../assets/images/Whatsapp1.svg'
-import arrow from '../../assets/images/crossArrow.svg'
-import KeyFeatures from './KeyFeatures';
-import Download from './Download';
-import DiscoverProducts from './DiscoverProducts';
+import rightArrow from '../../assets/images/Chevron_Right.svg'
 import Assistants from '../Home/Assistants'
-import FalconBarcode from './FalconBarcode';
+import product1 from '../../assets/images/laminar/Vertical Laminar AirFlow/Vertical Laminar Airflow-FRONT.webp'
+import product2 from '../../assets/images/laminar/Vertical Laminar AirFlow/Vertical Laminar Airflow-SIDE (1).webp'
+import product3 from '../../assets/images/laminar/Vertical Laminar AirFlow/Vertical Laminar Airflow-SIDE.webp'
 
 
-const ProductPage = () => {
+
+const AirFlowData = [
+    {
+        name: 'Laminar Cabinets',
+        title: 'Verticle Laminar Airflow',
+        //   highlighted: "(Agies)",
+        title1: 'Precision',
+        title2: 'Sterlity',
+        title3: 'Efficiency',
+        description1: 'Laminar air flow cabinets, also known as laminar clean benches, flow hoods, or air flow benches, create a controlled sterile environment to safeguard samples and products from contaminants like microorganisms and airborne particles. These cabinets operate by drawing air through a high-efficiency HEPA filter and channeling it in a consistent, streamlined airflow towards the user – the hallmark of "laminar flow."',
+        description2: 'Essential for applications requiring stringent cleanliness, these cabinets protect sensitive samples by directing airflow outward to prevent contamination. For handling hazardous chemicals or infectious materials, a biological safety cabinet is recommended to ensure both sample integrity and user safety.',
+        img1: product1,
+        img2: product2,
+        img3: product3,
+        img4: product2,
+    },
+]
+
+
+const Airflow = () => {
     const [selectedImage, setSelectedImage] = useState(product1);
 
     return (
@@ -21,7 +35,7 @@ const ProductPage = () => {
             <Header />
             <hr className="w-[95%] h-1 mt-6 border-t-1 border-[#C3C3C3] mx-auto" />
             <div className="p-6">
-                {productData.map((product, index) => (
+                {AirFlowData.map((product, index) => (
                     <div
                         key={index}
                         className="relative md:w-[90%] mx-auto md:flex justify-between items-center md:gap-8 pt-2 rounded-lg  border-[#1782C5]"
@@ -131,14 +145,48 @@ const ProductPage = () => {
             </div>
 
             <div className='p-6 md:w-[90%] mx-auto'>
-                <h1 className='text-center md:text-start text-xl md:text-2xl text-[#1782C5] p-1 px-2 py-3 rounded-lg bg-[#F5F5F5] font-medium'>Tailored to Meet Biosafety Needs</h1>
-                <p className='my-5 md:px-2 text-justify'>Biosafety Cabinets come in various classes, each catering to specific bio-containment requirements. Within these classes, the cabinets differ based on how air is recirculated or exhausted. Regardless of the type, all AirBio BSCs leverage High Efficiency Particulate Air (HEPA) or Ultra Low Particulate Air (ULPA) filters to maintain a sterile workspace.</p>
+                <h1 className='text-center md:text-start text-xl md:text-2xl text-[#1782C5] p-1 px-2 py-3 rounded-lg bg-[#F5F5F5] font-medium'>Meet AirBio’s Velocity Laminar Air Flow Cabinet</h1>
+                <p className='my-5 md:px-2 text-justify'>A trusted solution in laboratories worldwide, the Velocity vertical laminar air flow cabinet combines advanced technology with user-friendly features to elevate safety and efficiency. Available in multiple sizes, it boasts a modern touch-screen interface for seamless operation.</p>
             </div>
 
-            <KeyFeatures />
-            {/* <Download /> */}
-            <FalconBarcode/>
-            {/* <DiscoverProducts/> */}
+            <div className='p-6 md:w-[90%] mx-auto'>
+                <h1 className='text-center md:text-start text-xl md:text-2xl text-[#1782C5] p-1 px-2 py-3 rounded-lg bg-[#F5F5F5] font-medium'>Key Features of Velocity</h1>
+                <div className='md:px-2'>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Hinged Front Panel with self-support brackets for effortless maintenance and accessibility.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Intuitive Touch Interface for precise control and monitoring.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Dual Rear Cable Managers to keep your workspace tidy and organized.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Stainless Steel Work Surface, offering durability and easy cleaning.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Front-Loading HEPA Filter for superior filtration and straightforward replacement.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Trace Odor Pre-Filter, enhancing air purity.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>10° Angled Safety Glass for ergonomic visibility and comfort.</p>
+                    </div>
+                    <div className='flex items-start gap-3  mt-5'>
+                        <img src={rightArrow} alt="Right Arrow" className="w-4 h-4 mt-1" />
+                        <p>Glass Side Walls, providing enhanced illumination and visibility during operations.</p>
+                    </div>
+                </div>
+            </div>
+
             <div className='py-10'>
                 <Assistants />
             </div>
@@ -146,4 +194,4 @@ const ProductPage = () => {
     )
 }
 
-export default ProductPage
+export default Airflow

@@ -2,8 +2,9 @@ import product1 from '../../assets/images/product1.png'
 import product2 from '../../assets/images/product2.jpeg'
 import product3 from '../../assets/images/product3.jpeg'
 import product4 from '../../assets/images/fume/fume.webp'
-import Bproduct2 from '../../assets/images/biosafety/Main bsc class 2 A2/MAIN BSC CLASS II A2-CROSS.webp'
-import Bproduct3 from '../../assets/images/biosafety/Main bsc class 2 A2/MAIN BSC CLASS II A2-FRONT.webp'
+import Bproduct2 from '../../assets/images/biosafety/bsc class_B2 (Falcon)/BSC CLASS _ B2 (Falcon)-FRONT1.webp'
+import Bproduct1 from '../../assets/images/biosafety/Main bsc class 2 A2/MAIN BSC CLASS II A2-FRONT.webp'
+import Bproduct3 from '../../assets/images/biosafety/bsc class 2 B2 (Agies)/BSC CLASS II B2 (Agies)-FRONT.webp'
 import Bproduct4 from '../../assets/images/biosafety/bsc class 2 A2 (Agies)/BSC CLASS II A2 (Agies)-FRONT.webp'
 import Lproduct1 from '../../assets/images/laminar/Vertical Laminar Flow (Velocity)/Vertical Laminar Flow (Velocity)-FRONT.webp'
 import Lproduct2 from '../../assets/images/laminar/Vertical Laminar Flow (Velocity)/Vertical Laminar Flow (Velocity)-CROSS.webp'
@@ -17,11 +18,12 @@ const productData = [
     title: 'Create a secure environment to handle biological samples with maximum safety and compliance.',
     description1: 'Our wireless Class II Biological Safety Cabinets (BSC) protect users, samples and the environment from hazardous particles and biological materials. These cabinets are useful when handling infectious diseases, toxins or cell cultures where prevention of contamination is essential.',
     description2: 'It also helps keep lab workers safe by reducing exposure to droplets, splashes or airborne contaminants, ensuring no hazardous materials escape from the work area.',
-    img1: Bproduct3,  
+    img1: Bproduct1,  
     img2: Bproduct2,
     img3: Bproduct3,
     img4: Bproduct4,
-    italics: ["biological",'samples', "maximum","safety", "compliance."]
+    italics: ["biological",'samples', "maximum","safety", "compliance."],
+    route: "/product/:category"
   },
   {
     name: 'Fume Hoods',
@@ -32,7 +34,8 @@ const productData = [
     img2: product4,
     img3: product4,
     img4: product4,
-    italics: ["Safe,", "efficient", "eco-friendly"]
+    italics: ["Safe,", "efficient", "eco-friendly"],
+    route: "/product/category2"
   },  
   {
     name: 'Laminar Flow Cabinets',
@@ -43,7 +46,8 @@ const productData = [
     img2: Lproduct2,
     img3: Lproduct3,
     img4: Lproduct4,
-    italics: ["free,", "contaminant", "healthcare"]
+    italics: ["free,", "contaminant", "healthcare"],
+    route: "/product/category3"
   },
   
 ];

@@ -44,7 +44,7 @@ const About = () => {
 
       <div className='p-5'>
         <div className=' text-center md:max-w-[85%] mx-auto'>
-          <h1 className='text-3xl font-medium'>Get to Know Us</h1>
+          <h1 className='text-3xl md:text-4xl font-medium'>Get to Know Us</h1>
           <p className='mt-1 text-[#7A7A7A]'>Driving innovation and excellence to craft products that transform ideas into reality.</p>
           <img src={about} alt="" className='my-8 lg:w-full h-auto' />
           <p className='text-justify px-2'>At AirBio, we don’t just manufacture biosafety solutions; we craft an ecosystem of trust, performance, and reliability. Since our inception, AirBio has been driven by a singular mission—to empower laboratories worldwide with cutting-edge equipment that combines scientific precision with robust safety measures. Whether you're safeguarding research or enhancing operational efficiency, AirBio ensures you’re equipped with the best.</p>

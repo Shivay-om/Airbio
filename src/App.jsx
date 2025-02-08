@@ -16,6 +16,14 @@ import Blog2 from './components/Blog/Blog2';
 import Blog3 from './components/Blog/Blog3';
 import FumeHoods from './components/Allproductpage/FumeHoods';
 import LaminarFlow from './components/Allproductpage/LaminarFlow';
+import A2Agies from './components/products/A2Agies';
+import BSCA2 from './components/products/BSCA2';
+import MainA2 from './components/products/MainA2';
+import Airflow from './components/products/Airflow'
+import AirflowVelocity from './components/products/AirflowVelocity';
+import BAgies from './components/products/BAgies';
+import AirFumeHood from './components/products/AirFumeHood';
+
 
 function App() {
 
@@ -27,10 +35,25 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<DiscoverProducts />} />
-        <Route path="/product/:category" element={<AllProductPage />} />
-        <Route path="/product/category2" element={<FumeHoods/>} />
-        <Route path="/product/category3" element={<LaminarFlow/>} />
-        <Route path="/product/:category/:subcategory" element={<ProductPage />} />
+        <Route path="/product/Biosafety" element={<AllProductPage />} />
+        <Route path="/product/FumeHoods" element={<FumeHoods/>} />
+        <Route path="/product/laminar" element={<LaminarFlow/>} />
+
+        {/* //biosafety subpages// */}
+        <Route path="/product/Biosafety/BscClassIIB2" element={<ProductPage />} />
+        <Route path="/product/Biosafety/BscClassIIB2(Agies)" element={<BAgies />} />
+        <Route path="/product/Biosafety/BscClassIIA2(Agies)" element={< A2Agies/>} />
+        <Route path="/product/Biosafety/BscClassIIA2" element={<BSCA2 />} />
+        <Route path="/product/Biosafety/BscMainClassIIA2" element={<MainA2 />} />
+
+        {/* //Fume subpages// */}
+        <Route path="/product/FumeHoods/FumeHood" element={<AirFumeHood />} />
+
+        {/* //Laminar subpages// */}
+        <Route path="/product/laminar/Airflow" element={<Airflow />} />
+        <Route path="/product/laminar/Airflow(Velocity)" element={<AirflowVelocity />} />
+
+
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/blog1" element={<Blog />} />

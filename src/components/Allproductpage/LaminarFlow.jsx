@@ -22,73 +22,69 @@ import arrow from '../../assets/images/crossArrow.svg'
 const features = [
     {
         icon: icon1,
-        title: "Advanced Filtration System",
+        title: "Hinged Front Panel :",
         description:
-            "Options for carbon or HEPA filters to ensure precise air purification.",
+            " Self-support brackets for effortless maintenance and accessibility.",
     },
     {
         icon: icon2,
-        title: "Aerodynamic Sash Design",
+        title: "Intuitive Touch Interface :",
         description:
-            "Reduces turbulence and enhances user protection.",
+            "Precise control and monitoring.",
     },
     {
         icon: icon3,
-        title: "Digital Touch Interface",
+        title: "Dual Rear Cable Managers :",
         description:
-            "Accurate airflow monitoring and intuitive control.",
+            "Keep your workspace tidy and organized.",
     },
     {
         icon: icon4,
-        title: "Built-in Alarm System",
+        title: "Stainless Steel Work Surface :",
         description:
-            " Alert users to airflow inconsistencies or filter changes.",
+            "Offering durability and easy cleaning.",
     },
     {
         icon: icon5,
-        title: "Durable Work Surface",
+        title: "Front-Loading HEPA Filter :",
         description:
-            "Constructed from chemical-resistant materials for extended longevity.",
+            "Superior filtration and straightforward replacement.",
     },
     {
         icon: icon6,
-        title: "Customizable Exhaust  Options",
+        title: "Trace Odor Pre-Filter :",
         description:
-            "recirculating or ducted installations.",
+            "Enhancing air purity.",
     },
     {
         icon: icon7,
-        title: "Energy Efficient Design",
+        title: "10° Angled Safety Glass :",
         description:
-            "Provides excellent visibility with minimal energy consumption.",
+            "Ergonomic visibility and comfort. ",
     },
     {
         icon: icon8,
-        title: "Ergonomic Sash Handles",
+        title: "Glass Side Walls :",
         description:
-            "Designed for ease of use and operator comfort.",
+            "Providing enhanced illumination and visibility during operations. ",
     },
-    // {
-    //     icon: icon10,
-    //     title: "Energy Efficient Design",
-    //     description:
-    //         "Optimized to consume minimal energy while providing maximum performance.",
-    // },
+    
 ];
 const cardsData = [
     {
         title: "Falcon",
         image: art1, 
         subtitle: "Vertical Laminar AirFlow",
-        description: "Perfect for academic and laboratory settings",
+        description: "Laminar air flow cabinets provide a sterile, HEPA-filtered workspace",
         buttonText: "Visit Product",
     },
     {
         title: "Velocity",
         image: art2,
-        subtitle: "Vertical Laminar AirFlow (Velocity)",
-        description: "Perfect for academic and laboratory settings",
+        subtitle: "Vertical Laminar AirFlow",
+        description: "Safeguard samples but aren’t suitable for hazardous substances",
         buttonText: "Visit Product",
+        showTitle: true,
     },
     // {
     //     title: "Harmony",
@@ -151,10 +147,12 @@ const LaminarFlow = () => {
                                 {cardsData.map((card, index) => (
                                     <div key={index}>
                                         {/* Card Content */}
-                                        <div className="min-w-[318px] h-auto md:w-[300px] flex flex-col justify-center items-center md:min-w-0 rounded-3xl p-4 border border-[#CDCDCD]">
-                                            <h2 className="text-[16px] p-[4px] px-4 border-[#1782C5] text-[#1782C5] border rounded-[50px]">
-                                                {card.title}
-                                            </h2>
+                                        <div className="min-w-[318px] h-auto md:w-[300px] md:h-[370px] flex flex-col justify-center items-center md:min-w-0 rounded-3xl p-4 border border-[#CDCDCD]">
+                                        {card.showTitle && (
+                                                <h2 className="text-[16px] p-[4px] px-4 border-[#1782C5] text-[#1782C5] border rounded-[50px]">
+                                                    {card.title}
+                                                </h2>
+                                            )}
                                             <img
                                                 src={card.image}
                                                 alt={`Card ${index + 1}`}

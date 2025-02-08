@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { GoChevronRight, GoChevronLeft } from "react-icons/go";
+import { Link } from 'react-router-dom';
 
 const Products = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -55,7 +56,7 @@ const Products = () => {
           nextEl: '.custom-next', // Link to your custom next button
           prevEl: '.custom-prev', // Link to your custom prev button
         }}
-        pagination={{clickable: true}}
+        pagination={{ clickable: true }}
         modules={[Navigation, Autoplay, Pagination]}
         className="pb-16"
       >
@@ -118,13 +119,17 @@ const Products = () => {
 
                 {/* 3rd Div: Buttons */}
                 <div className="mb-4 flex flex-col justify-center items-center gap-3 md:flex-row md:justify-start space-x-4">
-                  <button className="bg-[#1782C5] text-white px-4 py-2 rounded-full hover:bg-black">
-                    Explore More
-                  </button>
+                  <Link to={product.route}>
+                    <button className="bg-[#1782C5] text-white px-4 py-2 rounded-full hover:bg-black">
+                      Explore More
+                    </button>
+                  </Link>
+                  <a href="https://drive.google.com/file/d/1OuRF-sKbGLIDmblAKsgwa7sBvxB1DoyX/view" target='_blank'>
                   <button className="px-4 py-2 bg-black text-white flex items-center gap-2 rounded-full border hover:border-[#1782C5] border-[#7A7A7A] hover:bg-[#1782C5] hover:text-white">
                     Download Brochure
                     <img src={SVG} alt="" className='' />
                   </button>
+                  </a>
                 </div>
               </div>
 

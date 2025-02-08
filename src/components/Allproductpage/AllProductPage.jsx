@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import Header from '../Home/Header'
 import img1 from '../../assets/images/contact1.png'
-import art1 from '../../assets/images/art1.webp'
-import art2 from '../../assets/images/art2.webp'
-import art3 from '../../assets/images/art3.webp'
+import art1 from '../../assets/images/biosafety/bsc class_B2 (Falcon)/BSC CLASS _ B2 (Falcon)-FRONT.webp'
+import art2 from '../../assets/images/biosafety/bsc class 2 B2 (Agies)/BSC CLASS II B2 (Agies)-FRONT.webp'
+import art3 from '../../assets/images/biosafety/bsc class 2 A2/BSC CLASS II A2-FRONT.webp'
+import art4 from '../../assets/images/biosafety/bsc class 2 A2 (Agies)/BSC CLASS II A2 (Agies)-FRONT.webp'
+import art5 from '../../assets/images/biosafety/Main bsc class 2 A2/MAIN BSC CLASS II A2-FRONT.webp'
 import vector from '../../assets/images/Vector.svg'
 import post2 from '../../assets/images/Post2.webp'
 import post3 from '../../assets/images/Post3.webp'
@@ -22,61 +24,61 @@ import arrow from '../../assets/images/crossArrow.svg'
 
 const features = [
     {
-        icon: icon1, // Replace with the path to your icon
+        icon: icon1,
         title: "HEPEX™ Zero Leak Airflow System",
         description:
             "Ensures uniform air distribution, prevents leaks with negative pressure chambers, and minimizes vibration transfer.",
     },
     {
-        icon: icon2, // Replace with the path to your second icon
+        icon: icon2,
         title: "Advanced Filtration Technology",
         description:
             "Utilizes high-efficiency particulate air (HEPA) filters to ensure 99.99% particle capture.",
     },
     {
-        icon: icon3, // Replace with the path to your third icon
+        icon: icon3,
         title: "Energy Efficient Design",
         description:
             "Optimized to consume minimal energy while providing maximum performance.",
     },
     {
-        icon: icon4, // Replace with the path to your icon
+        icon: icon4,
         title: "HEPEX™ Zero Leak Airflow System",
         description:
             "Ensures uniform air distribution, prevents leaks with negative pressure chambers, and minimizes vibration transfer.",
     },
     {
-        icon: icon5, // Replace with the path to your second icon
+        icon: icon5,
         title: "Advanced Filtration Technology",
         description:
             "Utilizes high-efficiency particulate air (HEPA) filters to ensure 99.99% particle capture.",
     },
     {
-        icon: icon6, // Replace with the path to your third icon
+        icon: icon6,
         title: "Energy Efficient Design",
         description:
             "Optimized to consume minimal energy while providing maximum performance.",
     },
     {
-        icon: icon7, // Replace with the path to your third icon
+        icon: icon7,
         title: "Energy Efficient Design",
         description:
             "Optimized to consume minimal energy while providing maximum performance.",
     },
     {
-        icon: icon8, // Replace with the path to your second icon
+        icon: icon8,
         title: "Advanced Filtration Technology",
         description:
             "Utilizes high-efficiency particulate air (HEPA) filters to ensure 99.99% particle capture.",
     },
     {
-        icon: icon9, // Replace with the path to your third icon
+        icon: icon9,
         title: "Energy Efficient Design",
         description:
             "Optimized to consume minimal energy while providing maximum performance.",
     },
     {
-        icon: icon10, // Replace with the path to your third icon
+        icon: icon10,
         title: "Energy Efficient Design",
         description:
             "Optimized to consume minimal energy while providing maximum performance.",
@@ -86,30 +88,39 @@ const features = [
 const cardsData = [
     {
         title: "Falcon",
-        image: art2, // Replace `art2` with the path to your image
-        subtitle: "Class II, Type A2 Biosafety Cabinet",
-        description: "Perfect for academic and laboratory settings",
+        image: art1,
+        subtitle: "Bsc Class II, B2 (Falcon)",
+        description: "A benchtop model with a 100% exhaust system for volatile chemicals and radionuclides.",
         buttonText: "Visit Product",
+        showTitle: true,
     },
     {
-        title: "Velocity",
-        image: art1, // Replace `art1` with the path to your image
-        subtitle: "Class II, Main A2 Biosafety Cabinet",
-        description: "Perfect for academic and laboratory settings",
+        title: "Agies",
+        image: art2,
+        subtitle: "Bsc Class II, B2 (Agies)",
+        description: "It ensures reliable containment with a dynamic air barrier and robust engineering control.",
         buttonText: "Visit Product",
+        showTitle: true,
     },
     {
         title: "Harmony",
-        image: art3, // Replace `art3` with the path to your image
-        subtitle: "Class II, Type B2 Biosafety Cabinet",
-        description: "Ideal for safely handling minute quantities of volatile chemicals & trace amounts of radionuclides",
+        image: art3,
+        subtitle: "Bsc Class II, A2",
+        description: "A compact, energy-efficient tabletop model ideal for labs and academia.",
         buttonText: "Visit Product",
     },
     {
-        title: "Infinity",
-        image: art1, // Replace `art4` with the path to your image
-        subtitle: "Class II, Main B2 Biosafety Cabinet",
-        description: "Ideal for safely handling minute quantities of volatile chemicals & trace amounts of radionuclides",
+        title: "Agies",
+        image: art4,
+        subtitle: "Bsc Class II, A2 (Agies)",
+        description: "Equipped with a high-efficiency DC ECM motor, it reduces energy use and extends filter life.",
+        buttonText: "Visit Product",
+        showTitle: true,
+    },
+    {
+        image: art5,
+        subtitle: "Main BSC Class II A2",
+        description: "Its durable stainless steel design simplifies cleaning and offers flexible airflow options for safety.",
         buttonText: "Visit Product",
     },
 
@@ -135,14 +146,14 @@ const AllProductPage = () => {
                         <div className='flex items-center justify-center gap-3 md:gap-5'>
                             <p className='border border-black p-1 px-4 text-sm md:text-lg rounded-3xl'>Precision</p>
                             <p className='border border-black p-1 px-4 text-sm md:text-lg rounded-3xl'>Sterility</p>
-                            <p className='border border-black p-1 px-4 text-sm md:text-lg rounded-3xl'>Efficiency</p>
+                            <p className='border border-black p-1 px-4 text-sm md:text-lg rounded-3xl'>Standard</p>
                         </div>
                     </div>
                     <div>
                         <img src={img1} alt="" className='md:h-[404px] md:w-auto object-cover' />
                     </div>
                 </div>
-                
+
                 {/* all cabinets */}
                 <div>
                     <div>
@@ -159,10 +170,12 @@ const AllProductPage = () => {
                                 {cardsData.map((card, index) => (
                                     <div key={index}>
                                         {/* Card Content */}
-                                        <div className="min-w-[318px] h-auto md:w-[300px] flex flex-col justify-center items-center md:min-w-0 rounded-3xl p-4 border border-[#CDCDCD]">
-                                            <h2 className="text-[16px] p-[4px] px-4 border-[#1782C5] text-[#1782C5] border rounded-[50px]">
-                                                {card.title}
-                                            </h2>
+                                        <div className="min-w-[318px] h-auto md:w-[300px] md:h-[370px] flex flex-col justify-center items-center md:min-w-0 rounded-3xl p-4 border border-[#CDCDCD]">
+                                            {card.showTitle && (
+                                                <h2 className="text-[16px] p-[4px] px-4 border-[#1782C5] text-[#1782C5] border rounded-[50px]">
+                                                    {card.title}
+                                                </h2>
+                                            )}
                                             <img
                                                 src={card.image}
                                                 alt={`Card ${index + 1}`}
@@ -171,7 +184,7 @@ const AllProductPage = () => {
                                         </div>
 
                                         {/* Card Details */}
-                                        <div className="py-2 flex flex-col justify-center  items-center md:items-start">
+                                        <div className="py-2 md:w-[300px] flex flex-col justify-center  items-center md:items-start">
                                             <h1 className="font-medium md:text-start text-lg">{card.subtitle}</h1>
                                             <p className="text-[#1782C5] text-center mb-3 md:text-start h-[50px]">{card.description}</p>
                                             <button className="px-4 py-1 bg-black hover:bg-[#1782C5] text-white flex justify-center items-center gap-2 rounded-[50px] mt-5 border-[#CDCDCD]">
@@ -187,7 +200,7 @@ const AllProductPage = () => {
                         </div>
                     </div>
                 </div>
-                                
+
                 {/* features */}
                 <div className="my-10 p-5 md:my-16 md:py-5">
                     <h1 className="text-2xl font-medium text-center my-5 pb-5">
@@ -218,7 +231,7 @@ const AllProductPage = () => {
                     {!showAll && (
                         <div className="flex justify-center items-center mt-5">
                             <button className="bg-white flex justify-between items-center gap-3 hover:bg-black hover:text-white w-auto h-[38px] px-2 pl-3 bg-transparent border-[#1782C5] rounded-full border"
-                             onClick={handleReadMore}>
+                                onClick={handleReadMore}>
                                 Read more
                                 <div className='bg-[#1782C5]  flex items-center justify-center text-white w-[28px] h-[28px] p-2 rounded-full'>
                                     <img src={arrow} className='' alt="Down arrow icon" />
